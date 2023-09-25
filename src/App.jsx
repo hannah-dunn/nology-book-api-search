@@ -1,12 +1,29 @@
 import { useState } from "react";
+import { getBooks } from "./services/getBooks";
+
+import Header from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
+import BookGrid from "./containers/BookGrid/BookGrid";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [searchTerm, setSearchTerm] = useState(null);
+  const [items, setItems] = useState([]);
+
+  const fetchBooks = async (searchTerm) => {
+    const data = await getBooks(searchTerm);
+    setItems(data.items || []);
+  };
+
+  const handleSubmit = (value) => {
+    setSearchTerm(value);
+    fetchBooks(value);
+  };
 
   return (
     <>
-      <h1>Google Books API Search Engine</h1>
-      <div></div>
+      <Header />
+      <SearchBar handleSubmit={handleSubmit} />
+      <BookGrid searchTerm={searchTerm} items={items}></BookGrid>
     </>
   );
 }
