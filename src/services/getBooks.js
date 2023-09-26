@@ -1,5 +1,5 @@
 export const getBooks = async (searchTerm = "") => {
-  const apiKey = `AIzaSyBN3dCb4bYTImbkGUtCtOQA1a166egyEWA`;
+  const apiKey = import.meta.env.VITE_GOOGLE_API;
   if (searchTerm === "") {
     throw new Error("Search must have a value");
   }
@@ -17,5 +17,3 @@ export const getBooks = async (searchTerm = "") => {
   const data = await response.json();
   return data;
 };
-
-// key=AIzaSyBN3dCb4bYTImbkGUtCtOQA1a166egyEWA
