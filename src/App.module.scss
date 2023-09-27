@@ -1,6 +1,7 @@
 .background {
-  background-image: url(/whitebooks-smaller.jpg);
-  background-position: bottom;
+  // background-image: url(/whitebooks-smaller.jpg);
+  // background-position: bottom;
+  background: linear-gradient(0deg, rgb(213, 213, 251), rgb(239, 233, 233) 40%, white);
 }
 
 @media screen and (max-width: 600px) {

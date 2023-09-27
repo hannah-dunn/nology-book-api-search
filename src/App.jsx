@@ -7,6 +7,7 @@ import SearchBar from "./components/SearchBar/SearchBar";
 import BookGrid from "./containers/BookGrid/BookGrid";
 import Footer from "./components/Footer/Footer";
 import BookList from "./components/BookList/BookList";
+import Gif from "./components/Gif/Gif";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState(null);
@@ -29,7 +30,6 @@ function App() {
         <SearchBar handleSubmit={handleSubmit} />
         <BookGrid searchTerm={searchTerm} items={items}></BookGrid>
         <BookList searchTerm={searchTerm} items={items} />
-        <Footer />
       </div>
     </>
   );
