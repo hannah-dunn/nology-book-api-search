@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./BookGrid.module.scss";
+import styles from "./BookGrid.module.scss";
 
 const BookGrid = ({ image, imageAlt, title, author, description }) => {
   let gridContent = styles.content;
@@ -31,7 +31,6 @@ const BookGrid = ({ image, imageAlt, title, author, description }) => {
             )}
           </div>
         )}
-        ;
       </div>
     </article>
   );

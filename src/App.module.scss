@@ -1,0 +1,16 @@
+.background {
+  background-image: url(/whitebooks-smaller.jpg);
+  background-position: bottom;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #87ceeb;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  body {
+    background-color: #de3163;
+  }
+}
