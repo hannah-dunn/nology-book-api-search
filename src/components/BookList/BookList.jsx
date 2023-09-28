@@ -1,7 +1,7 @@
-import BookGrid from "../../containers/BookGrid/BookGrid";
+import BookGrid from "../BookGrid/BookGrid";
 import styles from "./BookList.module.scss";
 
-const BookList = ({ searchTerm, items }) => {
+const BookList = ({ items }) => {
   const filteredBooks = items.map((item) => {
     return {
       id: item.id,
