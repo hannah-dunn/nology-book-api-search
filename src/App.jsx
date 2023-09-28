@@ -30,6 +30,7 @@ function App() {
         <SearchBar handleSubmit={handleSubmit} />
         <BookGrid searchTerm={searchTerm} items={items}></BookGrid>
         <BookList searchTerm={searchTerm} items={items} />
+        <Footer />
       </div>
     </>
   );

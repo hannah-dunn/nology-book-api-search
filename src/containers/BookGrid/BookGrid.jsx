@@ -14,7 +14,7 @@ const BookGrid = ({ image, imageAlt, title, author, description }) => {
         setContentShown(!contentShown);
         setIsClicked(!isClicked);
       }}
-      style={isClicked ? { border: "2px solid black" } : null}
+      style={isClicked ? { border: " 3px solid #00b4cc" } : null}
     >
       <div>
         {contentShown && <img src={image} alt={imageAlt}></img>}

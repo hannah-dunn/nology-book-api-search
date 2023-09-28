@@ -15,19 +15,24 @@ const SearchBar = ({ handleSubmit }) => {
   };
 
   return (
-    <form id="search" className={style.searchbar_form} onSubmit={formSubmit}>
-      <input
-        className={style.searchbar_input}
-        type="text"
-        placeholder="Keywords, title, authors..."
-        value={input}
-        onChange={onInputChange}
-        id="searchInput"
-      />
-      <button className={style.searchbar_button} type="submit">
-        Search
-      </button>
-    </form>
+    <div>
+      <form id="search" className={style.searchbar_form} onSubmit={formSubmit}>
+        <input
+          className={style.searchbar_input}
+          type="text"
+          placeholder="Keywords, title, authors..."
+          value={input}
+          onChange={onInputChange}
+          id="searchInput"
+        />
+        <button className={style.searchbar_button} type="submit">
+          Search
+        </button>
+      </form>
+      <p className={style.prompt}>
+        Click on individual result for more information
+      </p>
+    </div>
   );
 };
 

@@ -16,22 +16,22 @@ const BookList = ({ searchTerm, items }) => {
 
   return (
     <>
-      {items && items.length > 0 ? (
-        <div className={gridClasses}>
-          {filteredBooks.map((book) => (
-            <BookGrid
-              key={book.id}
-              image={book.image ? book.image + "&fife=w200-h300" : null}
-              imageAlt={book.image ? "Cover image of " + book.title : null}
-              title={book.title || null}
-              author={book.authors ? book.authors.join(" & ") : null}
-              description={book.description || null}
-            />
-          ))}
-        </div>
-      ) : (
+      {/* {items && items.length > 0 ? ( */}
+      <div className={gridClasses}>
+        {filteredBooks.map((book) => (
+          <BookGrid
+            key={book.id}
+            image={book.image ? book.image + "&fife=w200-h300" : null}
+            imageAlt={book.image ? "Cover image of " + book.title : null}
+            title={book.title || null}
+            author={book.authors ? book.authors.join(" & ") : null}
+            description={book.description || null}
+          />
+        ))}
+      </div>
+      {/* ) : (
         <p>{`Please enter a valid search term, ${searchTerm} is invalid.`}</p>
-      )}
+      )} */}
     </>
   );
 };

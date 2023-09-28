@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
 .content {
+  font-family: "Lato", sans-serif;
   width: 380px;
   height: 500px;
   padding: 10px;
@@ -6,8 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   border: 2px solid white;
   cursor: pointer;
   @media screen and (max-width: 880px) {
@@ -30,4 +31,5 @@
 .description {
   max-height: 200px;
   overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
