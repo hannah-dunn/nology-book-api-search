@@ -8,7 +8,7 @@ const Header = () => {
       <p className={styles.heading_prompt}>
         Enter titles, keywords or authors to find your book
       </p>
-      <img className={styles.gif} src={gif} alt="book gif" />
+      {/* <img className={styles.gif} src={gif} alt="book gif" /> */}
     </header>
   );
 };

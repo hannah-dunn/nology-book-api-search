@@ -9,15 +9,15 @@ const BookList = ({ searchTerm, items }) => {
       authors: item.volumeInfo.authors,
       title: item.volumeInfo.title,
       description: item.volumeInfo.description,
+      datePublished: item.volumeInfo.publishedDate,
     };
   });
 
-  let gridClasses = styles.grid;
+  let gridLayout = styles.grid;
 
   return (
     <>
-      {/* {items && items.length > 0 ? ( */}
-      <div className={gridClasses}>
+      <div className={gridLayout}>
         {filteredBooks.map((book) => (
           <BookGrid
             key={book.id}
@@ -26,12 +26,10 @@ const BookList = ({ searchTerm, items }) => {
             title={book.title || null}
             author={book.authors ? book.authors.join(" & ") : null}
             description={book.description || null}
+            datePublished={book.datePublished || null}
           />
         ))}
       </div>
-      {/* ) : (
-        <p>{`Please enter a valid search term, ${searchTerm} is invalid.`}</p>
-      )} */}
     </>
   );
 };

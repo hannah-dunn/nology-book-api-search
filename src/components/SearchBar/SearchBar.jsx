@@ -29,9 +29,6 @@ const SearchBar = ({ handleSubmit }) => {
           Search
         </button>
       </form>
-      <p className={style.prompt}>
-        Click on individual result for more information
-      </p>
     </div>
   );
 };
