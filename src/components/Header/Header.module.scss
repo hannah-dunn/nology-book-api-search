@@ -1,14 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
 .heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
+  font-size: 50px;
   margin-left: 20px;
+  position: relative;
 }
 
 .heading_prompt {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   margin-left: 20px;
   display: flex;
   justify-content: center;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  header {
+    font-size: 40px;
+  }
+}
+
+.gif {
+  // display: flex;
+  // justify-content: center;
+  // width: 170px;
+  z-index: 2;
+  width: 100px;
+  position: absolute;
 }

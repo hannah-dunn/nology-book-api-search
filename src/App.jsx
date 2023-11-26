@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { getBooks } from "./services/getBooks";
 
+import styles from "./App.module.scss";
 import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
-import BookGrid from "./containers/BookGrid/BookGrid";
+import BookGrid from "./components/BookGrid/BookGrid";
+import Footer from "./components/Footer/Footer";
+import BookList from "./components/BookList/BookList";
+import Gif from "./components/Gif/Gif";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState(null);
@@ -21,9 +25,13 @@ function App() {
 
   return (
     <>
-      <Header />
-      <SearchBar handleSubmit={handleSubmit} />
-      <BookGrid searchTerm={searchTerm} items={items}></BookGrid>
+      <div className={styles.background}>
+        <Header />
+        <SearchBar handleSubmit={handleSubmit} />
+        <BookGrid searchTerm={searchTerm} items={items}></BookGrid>
+        <BookList searchTerm={searchTerm} items={items} />
+        <Footer />
+      </div>
     </>
   );
 }
